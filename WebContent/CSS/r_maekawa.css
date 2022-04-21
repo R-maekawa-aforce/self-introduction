@@ -21,7 +21,7 @@ html,body{
   z-index:-1;/*描画を一番下に*/
   width: 100%;
   height:100%;
-  background-color:#999966;/*背景色*/
+  background-color:#777777;/*背景色*/
 }
 
 #wrapper{
@@ -59,6 +59,7 @@ html,body{
 .caption{
     display: block;
     padding: 10px 0;
+    font-size:150%;
 }
 
 /*===　サムネイル表示のためのcss　*/
@@ -73,13 +74,25 @@ html,body{
     -webkit-flex-direction: column;
     flex-direction: column;
     height: 200px;
+    align-items:center;
 }
 
-
-
 .gallery li{
-  width:33.333%;
-    padding: 0 10px;
+  width:50%;
+}
+
+li{
+	display:flex;
+	align-items:center;
+}
+
+.text{
+	font-size:250%;
+	width:300px 300px;
+}
+
+.gallery li:nth-child(odd){
+	flex-direction:row-reverse;
 }
 
 /*画像の横幅を100%にしてレスポンシブ化*/
@@ -99,22 +112,85 @@ ul{
 
 a{
   color: #333;
+  width:500%;
+  padding:10px;
 }
 
-a:hover,
 a:active{
   text-decoration: none;
 }
 
 h1{
   text-align: center;
-  font-size:6vw;
+  font-size:5vw;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin:30px 0;
+  color:#333333;
 }
 
 p{
   margin:0 10px 10px 10px;
   word-wrap : break-word;
+  color:#dddddd;
 }
+
+#intro{
+	font-size:200%
+}
+
+.big{
+	width:30%;
+	height:10%;
+}
+.small{
+	width:25%;
+}
+
+a{
+	position: relative;/*波紋の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+}
+a::before{
+	position: absolute;
+	content:"";
+	transform: scale(0);/*円の大きさ初期値は0*/
+	opacity: 0;/*透過0*/
+	width:100%;/*円のサイズ指定*/
+	height:100%;/*円のサイズ指定*/
+	border-radius:50%;/*円の角丸指定*/
+	background: rgba(255,255,255,0.4);/*円の背景色*/
+}
+
+a:hover::before{
+	animation: circle 0.75s;
+}
+
+@keyframes circle {
+  0% {
+  transform: scale(0);
+  opacity: 1;/*透過なし*/
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+  transform: scale(2);/*アニメーションで大きくなった2倍の円の指定*/
+  }
+}
+
+.zoom{
+	transform: scale(1);
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoom:hover{
+	transform:scale(1.1,1.1);
+}
+
+img{
+	border-radius:20px
+}
+
