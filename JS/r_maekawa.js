@@ -95,9 +95,6 @@ $(".gallery-list").modaal({
   }
 });
 
-
-
-
 /**
  *
  */
