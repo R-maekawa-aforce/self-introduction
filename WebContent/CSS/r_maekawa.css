@@ -126,7 +126,7 @@ h1{
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin:30px 0;
-  color:#333333;
+  color:#111111;
 }
 
 p{
@@ -193,4 +193,3 @@ a:hover::before{
 img{
 	border-radius:20px
 }
-
