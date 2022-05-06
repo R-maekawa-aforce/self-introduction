@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>入力フォーム</title>
-<link href="practiceTest8.css" media="all" rel="stylesheet">
+<link href="css/practiceTest8.css" media="all" rel="stylesheet">
 
 </head>
 <body>
 	<form action="practiceTest8_return.html" method="get">
 
-	<p>名前 : <input type="text" name="name"></p>
-	<p>メールアドレス : <input type="text" name="mail"></p>
-	<p>誕生日 :
+	<p><label>名前 : </label><input type="text" name="name"></p>
+	<p><label>メールアドレス : </label><input type="text" name="mail"></p>
+	<p><label>誕生日 :</label>
 		<select name="birthMonth">
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -61,11 +61,11 @@
 			<option value="31">31</option>
 		</select>
 	</p>
-	<p>性別 :
+	<p><label>性別 :</label>
 		<input type="radio" name="gender" value="male">男性
 		<input type="radio" name="gender" value="female">女性
 	</p>
-	<p>OS :
+	<p><label>OS :</label>
 		<input type="checkbox" name="OS" value="windows7">windows7
 		<input type="checkbox" name="OS" value="windows8">windows8
 		<input type="checkbox" name="OS" value="windows10">windows10
@@ -73,7 +73,7 @@
 		<input type="checkbox" name="OS" value="Linux">Linux
 	</p>
 
-	<p>ひとこと : <textarea name="coment" rows=3 ></textarea></p>
+	<p><label>ひとこと : </label><textarea name="coment" rows=3 ></textarea></p>
 	<p><button type="submit" name="submit">登録</button></p>
 <!--  formaction="(practiceTest8_return.html)" -->
 	</form>
