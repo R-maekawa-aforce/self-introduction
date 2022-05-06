@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>入力フォーム</title>
+<link href="practiceTest8.css" media="all" rel="stylesheet">
+
+</head>
+<body>
+	<form action="practiceTest8_return.html" method="get">
+
+	<p>名前 : <input type="text" name="name"></p>
+	<p>メールアドレス : <input type="text" name="mail"></p>
+	<p>誕生日 :
+		<select name="birthMonth">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+		</select>
+
+		<select name="birthDay">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
+	</p>
+	<p>性別 :
+		<input type="radio" name="gender" value="male">男性
+		<input type="radio" name="gender" value="female">女性
+	</p>
+	<p>OS :
+		<input type="checkbox" name="OS" value="windows7">windows7
+		<input type="checkbox" name="OS" value="windows8">windows8
+		<input type="checkbox" name="OS" value="windows10">windows10
+		<input type="checkbox" name="OS" value="mac">mac
+		<input type="checkbox" name="OS" value="Linux">Linux
+	</p>
+
+	<p>ひとこと : <textarea name="coment" rows=3 ></textarea></p>
+	<p><button type="submit" name="submit">登録</button></p>
+<!--  formaction="(practiceTest8_return.html)" -->
+	</form>
+</body>
+</html>
